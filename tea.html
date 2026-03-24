@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soft Knee Exoskeleton Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand">Soft Knee Exoskeleton</div>
+        <a class="toplink" href="#project-overview">Explore</a>
+      </nav>
+
+      <div class="hero__content">
+        <p class="eyebrow">Thesis Project</p>
+        <h1>Designing a softer, more wearable knee exoskeleton.</h1>
+        <p class="hero__text">
+          This project investigates how twisted elastic actuators can replace rigid lower-limb actuation
+          with a compact, compliant, and human-friendly alternative for assistive robotics.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#project-overview">Read the project story</a>
+          <a class="button button--secondary" href="#results">See test insights</a>
+          <a class="button button--secondary" href="#deep-dives">Open detailed pages</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="project-overview" class="section section--light">
+        <div class="section__header">
+          <p class="section__label">Project Overview</p>
+          <h2>Why this research matters</h2>
+        </div>
+        <div class="grid grid--2col">
+          <article class="card">
+            <h3>The challenge with conventional exoskeletons</h3>
+            <p>
+              Traditional lower-limb exoskeletons often depend on rigid motors, valves, and heavy mechanical
+              structures. While effective in delivering support, these systems can feel bulky, restrictive,
+              and difficult to use comfortably in everyday environments.
+            </p>
+          </article>
+          <article class="card">
+            <h3>The goal of this thesis</h3>
+            <p>
+              The Soft Knee Exoskeleton project explores a more wearable solution by combining soft robotic
+              principles with twisted elastic actuators. The aim is to make assistive devices feel more
+              natural, compact, and practical for human movement.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--dark">
+        <div class="section__header">
+          <p class="section__label">Core Technology</p>
+          <h2>What are twisted elastic actuators?</h2>
+          <p>
+            Twisted elastic actuators build on the idea of twisted string actuation, but replace rigid string
+            materials with soft and elastic elements. This modification introduces compliance directly into
+            the actuator and opens up new behavior for wearable systems.
+          </p>
+        </div>
+
+        <div class="feature-list">
+          <article class="feature-card">
+            <h3>Variable stiffness</h3>
+            <p>
+              Twisting can actively change the stiffness of the elastic cord, allowing the actuator to adapt
+              to different tasks and interaction conditions.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Improved force control</h3>
+            <p>
+              The compliant elastic element behaves like a series elastic component, improving stability and
+              precision during human-robot interaction.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Impact tolerance</h3>
+            <p>
+              Elasticity helps absorb shocks and reduce the load transmitted to motors, gearboxes, and other
+              rigid drivetrain elements.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Energy storage and release</h3>
+            <p>
+              The actuator can store potential energy and release it during dynamic motion, supporting more
+              efficient cyclic movement.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Reduced wear</h3>
+            <p>
+              By damping vibrations and impact loads, the elastic system can reduce drivetrain stress and
+              extend component life.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="results" class="section section--light">
+        <div class="section__header">
+          <p class="section__label">Experimental Work</p>
+          <h2>Testing the actuator behavior</h2>
+          <p>
+            The project includes tests examining force output with respect to the number of actuator turns and
+            the number of strings used in the setup. These experiments help characterize performance,
+            repeatability, and nonlinear behavior at higher twist levels.
+          </p>
+        </div>
+
+        <div class="grid grid--3col">
+          <article class="card accent-card">
+            <h3>Force vs. revolutions</h3>
+            <p>
+              The force response shows an approximately linear trend until the system reaches peak force.
+              This gives a useful operating region for predictable assistance.
+            </p>
+          </article>
+          <article class="card accent-card">
+            <h3>Repeatability</h3>
+            <p>
+              Repeatability tests indicate that the revolution count for consistent system behavior remains
+              stable across multiple iterations.
+            </p>
+          </article>
+          <article class="card accent-card">
+            <h3>Double coiling effects</h3>
+            <p>
+              After peak force, the force can decrease and then rise suddenly. This behavior is attributed to
+              double coiling and is a key nonlinear phenomenon in the actuator response.
+            </p>
+          </article>
+        </div>
+      </section>
+
+
+      <section id="deep-dives" class="section section--light">
+        <div class="section__header">
+          <p class="section__label">Detailed Pages</p>
+          <h2>Explore each topic in a dedicated page</h2>
+          <p>
+            Use these pages to present focused information on core TEA concepts, force tests, and actuation
+            tests while keeping the main landing page concise.
+          </p>
+        </div>
+
+        <div class="grid grid--3col">
+          <article class="card link-card">
+            <h3>Twisted Elastic Actuators</h3>
+            <p>Understand TEA principles, mechanics, and relevance to wearable robotics.</p>
+            <a class="card-link" href="twisted-elastic-actuators.html">Open page →</a>
+          </article>
+          <article class="card link-card">
+            <h3>Force Tests</h3>
+            <p>Review force-vs-rotation behavior, peak-force regions, and nonlinear transitions.</p>
+            <a class="card-link" href="force-tests.html">Open page →</a>
+          </article>
+          <article class="card link-card">
+            <h3>Actuation Tests</h3>
+            <p>See repeatability and motion-quality checkpoints used for evaluating actuation.</p>
+            <a class="card-link" href="actuation-tests.html">Open page →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--banner">
+        <div class="banner">
+          <div>
+            <p class="section__label">Vision</p>
+            <h2>Toward exoskeletons that feel less like machines and more like extensions of the body.</h2>
+          </div>
+          <p>
+            By using soft actuation principles, this work contributes to assistive systems that prioritize
+            comfort, adaptability, and safe physical interaction.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

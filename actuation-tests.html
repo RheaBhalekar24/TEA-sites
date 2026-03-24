@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actuation Tests | Soft Knee Exoskeleton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="subpage">
+      <a class="backlink" href="index.html">← Back to main page</a>
+      <p class="eyebrow">Experiments</p>
+      <h1 style="color: white;">Actuation Tests (Antagonistic Demonstration)</h1>
+      <p class="lead" style="color: white;">
+        This page documents the qualitative actuation experiment used to demonstrate that Twisted Elastic
+        Actuators (TEAs) reproduce the key contraction behavior of traditional Twisted String Actuators (TSAs).
+      </p>
+
+      <section class="subpage-card">
+        <h2>Purpose of the experiment</h2>
+        <p>
+          The objective was to verify <strong>functional similarity</strong> between TEAs and TSAs in a controlled
+          antagonistic-style actuation setup. This test was not designed to benchmark ultimate load-bearing
+          performance.
+        </p>
+      </section>
+
+      <section class="subpage-card">
+        <h2>Test apparatus</h2>
+        <ul>
+          <li>Pivot-based loading mechanism .</li>
+          <li>Two parallel vertical columns supporting a symmetric pivoting beam assembly.</li>
+          <li>Rectangular beam/frame mounted on a fulcrum, permitting full 360&deg; rotation.</li>
+          <li>Opposing frame ends carrying the actuator string bundle and a 250 g load.</li>
+          <li> <b>Actuation test setup: a: Parallel vertical columns b: Strings
+            for actuation c: Rectangular frame d: Load e: motor with an attached
+                rotary encoder.</b></li>
+
+        </ul>
+        <figure class="observed-behavior-container">
+            <img src="images/act-test.png" />
+            <!-- <figcaption></figcaption> -->
+        </figure>
+      </section>
+
+      <section class="subpage-card">
+        <h2>Observed behavior during actuation</h2>
+        <ul>
+          <li>As strings twisted, the TEA lifted the load and generated measurable axial contraction.</li>
+          <li>Contraction continued until onset of multicoiling, after which string failure occurred.</li>
+          <li>
+            Motion-capture tracking recorded trajectory and contraction along the principal actuation
+            axis z-axis.
+          <li><b>The contraction resembles the force profile from the force tests </b></li>
+          
+          <figure class="observed-behavior-container">
+            <img src="images/zaxis.png" />
+            <!-- <figcaption>String anchored on motor flange assembly.</figcaption> -->
+          </figure>
+
+          </li>
+        </ul>
+      </section>
+
+      <section class="subpage-card">
+        <h2>Motion-capture summary</h2>
+        <ul>
+          <li>Maximum contraction along z-axis: <strong>15 mm</strong>.</li>
+          <li>Lateral deviation along x-axis: ~<strong>2 mm</strong> (due to no lateral constraints).</li>
+          <li>y-coordinate remained effectively constant.</li>
+          <li>Sharp position changes in x and z corresponded to onset of multicoiling.</li>
+        </ul>
+      </section>
+
+      <section class="subpage-card">
+        <h2>Antagonistic setup (next step)</h2>
+        <p><strong>This is planned work.</strong></p>
+        <p>
+          Instead of using a hanging weight, the next configuration will use a <strong>three-string antagonistic
+          setup</strong>, where one actuator string bundle opposes the other to produce bidirectional behavior.
+        </p>
+        <ul>
+          <li>Replace the 500 g external load with the second opposing string path.</li>
+          <li>Maintain symmetric routing around the pivot frame.</li>
+          <li>Compare contraction trajectory and observe hysteresis.</li>
+        </ul>
+
+        
+        <figure class="observed-behavior-container">
+            <img src="images/pos-act.png" />
+            <!-- <figcaption>String anchored on motor flange assembly.</figcaption> -->
+        </figure>
+      </section>
+
+      <section class="subpage-card">
+        <h2>Download stuff here </h2>
+        <!-- <p>Add the corresponding images to the page when available:</p> -->
+        <p>
+          <href> <source> </href>        
+          <a href="https://wpi0.sharepoint.com/:f:/s/gr-srl/IgDERS2wmA4CR6L87rirkatRAZtjxG-kjCM2fW_WHOEU_fc?e=LTcT9T" target="_blank">CAD Files</a>
+          <!-- <a href="https://wpi0.sharepoint.com/:f:/r/sites/gr-srl/Shared%20Documents/Projects/Twisting%20Elastic%20Actuator/TEAs%20-%20Rhea/code?csf=1&web=1&e=9myZ6Y" target="_blank">Arduino Code</a> -->
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Force Tests | Soft Knee Exoskeleton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="subpage">
+      <a class="backlink" href="index.html">← Back to main page</a>
+      <p class="eyebrow">Experiments</p>
+      <h1 style="color: white;">Force Test Overview</h1>
+      <p class="lead" style="color: white;">
+        This page summarizes the benchtop twisted string actuator (TSA) force tests used to validate the
+        contact-pressure-based tension model and identify stable operating zones for assistive knee actuation.
+      </p>
+
+
+      <section class="subpage-card">
+        <h2>Test setup images</h2>
+        <div class="image-grid">
+          <figure>
+            <img src="images/test-setup.png" alt="CAD and physical benchtop TSA setup" />
+            <figcaption>CAD and physical rig comparison.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/slot.jpeg" alt="String seated inside printed channel" />
+            <figcaption>String seated in printed guide channel.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/string.jpeg" alt="Burned string end for locking" />
+            <figcaption>Heat-sealed string end.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/motor.jpeg" alt="String attached at motor flange" />
+            <figcaption>String anchored on motor flange assembly.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/putty1.png" alt="PuTTY serial connection settings" />
+            <figcaption>PuTTY serial configuration (COM port and baud rate).</figcaption>
+          </figure>
+          <figure>
+            <img src="images/putty2.png" alt="PuTTY logging settings" />
+            <figcaption>PuTTY logging configuration for test data capture.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="subpage-card">
+        <h2>Setup</h2>
+        <ul>
+          <li>Elastic tendon: TPU 85A filament, 1.75 mm diameter.</li>
+          <li>Actuation: N20 DC gearmotor (stall torque = 3 kg-cm).</li>
+          <li>Configuration: paired-string routing with fixed slot array and maintained pre-tension.</li>
+          <li>Measurement: 5 kg load cell + HX711, measuring axial force <em>F<sub>z</sub></em>.</li>
+          <li>Constraint: linear contraction mechanically constrained to isolate force generation.</li>
+          <li>Baseline inter-string spacing: 0.05 m (unless otherwise stated).</li>
+        </ul>
+      </section>
+
+      <section class="subpage-card">
+        <h2>Primary variables</h2>
+        <ul>
+          <li>Motor rotational displacement, <em>&theta;</em>.</li>
+          <li>Radius of the strings.</li>
+          <li>Number of strings, <em>K</em>.</li>
+        </ul>
+      </section>
+
+      <section class="subpage-card">
+        <h2>Test setup assembly</h2>
+        <ol>
+          <li>Prepare frame and holders.</li>
+          <li>Install motor setup (motor holder, motor cap, flange bearing, string base).</li>
+          <li>Install load cell holder and align the sensing axis with string loading direction.</li>
+          <li>Install string holder and verify consistent pre-tension before each trial.</li>
+        </ol>
+      </section>
+
+      <section class="subpage-card">
+        <h2>String preparation</h2>
+        <ol>
+          <li>Cut strings to match the selected slot pattern.</li>
+          <li>Heat-seal (burn) string ends.</li>
+          <li>Insert strings into motor flange slots.</li>
+          <li>Attach strings to string holder.</li>
+        </ol>
+      </section>
+
+      <section class="subpage-card">
+        <h2>Data logging instructions</h2>
+        <ol>
+          <li>Load the test firmware from this repo.</li>
+          <li>Open PuTTY and set <strong>Connection type: Serial</strong>.</li>
+          <li>Set serial line (for example COM4) and baud rate <strong>57600</strong>.</li>
+          <li>Under Logging, select <strong>All session output</strong> and save as a <strong>.txt</strong> file.</li>
+          <li>Close Arduino IDE serial monitor before PuTTY logging to avoid serial-port interference.</li>
+          <li>Run test and record data.</li>
+        </ol>
+      </section>
+
+      <section class="subpage-card">
+        <h2>Post-processing</h2>
+        <ul>
+          <li><code>time_s = time_ms / 1000</code></li>
+          <li><code>revolutions = encoder_ticks / 7200</code></li>
+        </ul>
+      </section>
+
+      <section class="subpage-card">
+        <h2>Observed behavior</h2>
+        <ul>
+          <li>Force generally increases approximately linearly in the early twisting region.</li>
+          <li>A maximum-force region is reached before nonlinear effects dominate.</li>
+          <li>At higher twist levels, force can dip and then spike due to double-coiling behavior.</li>
+        </ul>
+
+          <figure class="observed-behavior-container">
+            <img src="images/revsvsForce25mm.png" />
+            <!-- <figcaption>String anchored on motor flange assembly.</figcaption> -->
+          </figure>
+      </section>
+
+      <section class="subpage-card">
+        <h2>Conclusions</h2>
+        <p>
+          Unlike Twisted string actuators where the force saturates with increased angular displacement. We observe a 
+          drop in the force after an initial peak.
+          This is attributed to the material properties of the Elastic strings 
+        </p>
+      </section>
+
+      <section class="subpage-card">
+        <h2>Download Contents from here </h2>
+        <p>
+          <href> <source> </href>        
+          <a href="https://wpi0.sharepoint.com/:f:/s/gr-srl/IgB5rzcrBRwkRJLrtGcGvsDRAVNxqxgpeWcl-BNR05yHUFU?e=PA22kK" target="_blank">CAD Files</a>
+          <a href="https://wpi0.sharepoint.com/:f:/r/sites/gr-srl/Shared%20Documents/Projects/Twisting%20Elastic%20Actuator/TEAs%20-%20Rhea/code?csf=1&web=1&e=9myZ6Y" target="_blank">Arduino Code</a>
+        </p>
+
+
+
+      </section>
+    </main>
+  </body>
+</html>
